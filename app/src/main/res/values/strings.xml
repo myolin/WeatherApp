@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Weather App</string>
+    <string name="location_error_title">Location Error</string>
+    <string name="location_error_message">The specified location could not be resolved. Please
+        try a different location.</string>
+    <string name="weather_data_error_title">Weather Data Error</string>
+    <string name="weather_data_error_message">There was an error retrieving the weather data. Please
+        try again later.</string>
+    <string name="no_internet_title">No Internet Connection</string>
+    <string name="no_internet_message">This app requires an internet connection to function
+        properly. Please check your connection and try again.</string>
+    <string name="morning">Morning</string>
+    <string name="afternoon">Afternoon</string>
+    <string name="evening">Evening</string>
+    <string name="night">Night</string>
+    <string name="location_input_title">Enter a Location</string>
+    <string name="location_input_message">For US locations, enter a \'City\', or \'City, State\'
+        \n\nFor international locations enter as \'City, Country\'</string>
+</resources>

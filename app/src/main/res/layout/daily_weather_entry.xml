@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/lighter_teal">
+
+    <TextView
+        android:id="@+id/daily_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_teal"
+        android:paddingHorizontal="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Saturday, 10/12" />
+
+    <TextView
+        android:id="@+id/daily_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/daily_date"
+        tools:text="71°F/60°F" />
+
+    <TextView
+        android:id="@+id/daily_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:singleLine="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/daily_temperature"
+        app:layout_constraintStart_toStartOf="@+id/daily_temperature"
+        app:layout_constraintTop_toBottomOf="@+id/daily_temperature"
+        tools:text="Partly cloudy throughout the day." />
+
+    <TextView
+        android:id="@+id/daily_precipitation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/daily_description"
+        app:layout_constraintStart_toStartOf="@+id/daily_description"
+        app:layout_constraintTop_toBottomOf="@+id/daily_description"
+        tools:text="(42% precip.)" />
+
+    <TextView
+        android:id="@+id/daily_uv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/daily_precipitation"
+        app:layout_constraintStart_toStartOf="@+id/daily_precipitation"
+        app:layout_constraintTop_toBottomOf="@+id/daily_precipitation"
+        tools:text="UV Index: 4" />
+
+    <ImageView
+        android:id="@+id/daily_icon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/daily_date"
+        tools:srcCompat="@drawable/partly_cloudy_day" />
+
+    <TextView
+        android:id="@+id/daily_morning_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/daily_afternoon_temp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/daily_uv"
+        tools:text="62°F" />
+
+    <TextView
+        android:id="@+id/daily_afternoon_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/daily_evening_temp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/daily_morning_temp"
+        app:layout_constraintTop_toTopOf="@+id/daily_morning_temp"
+        tools:text="62°F" />
+
+    <TextView
+        android:id="@+id/daily_evening_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/daily_night_temp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/daily_afternoon_temp"
+        app:layout_constraintTop_toTopOf="@+id/daily_afternoon_temp"
+        tools:text="62°F" />
+
+    <TextView
+        android:id="@+id/daily_night_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/daily_evening_temp"
+        app:layout_constraintTop_toTopOf="@+id/daily_evening_temp"
+        tools:text="62°F" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/morning"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/daily_morning_temp"
+        app:layout_constraintStart_toStartOf="@+id/daily_morning_temp"
+        app:layout_constraintTop_toBottomOf="@+id/daily_morning_temp"
+        tools:text="Morning" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/afternoon"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="@+id/daily_afternoon_temp"
+        app:layout_constraintStart_toStartOf="@+id/daily_afternoon_temp"
+        app:layout_constraintTop_toBottomOf="@+id/daily_afternoon_temp"
+        tools:text="Afternoon" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/evening"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView11"
+        app:layout_constraintEnd_toEndOf="@+id/daily_evening_temp"
+        app:layout_constraintStart_toStartOf="@+id/daily_evening_temp"
+        app:layout_constraintTop_toBottomOf="@+id/daily_evening_temp"
+        tools:text="Evening" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/night"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView12"
+        app:layout_constraintEnd_toEndOf="@+id/daily_night_temp"
+        app:layout_constraintStart_toStartOf="@+id/daily_night_temp"
+        app:layout_constraintTop_toBottomOf="@+id/daily_night_temp"
+        tools:text="Night" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

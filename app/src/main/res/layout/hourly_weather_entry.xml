@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="8dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="4dp">
+
+    <TextView
+        android:id="@+id/hourly_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:text="Today"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hourly_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/hourly_day"
+        app:layout_constraintStart_toStartOf="@+id/hourly_day"
+        app:layout_constraintTop_toBottomOf="@+id/hourly_day"
+        tools:text="1:00 PM" />
+
+    <ImageView
+        android:id="@+id/hourly_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/hourly_time"
+        app:layout_constraintStart_toStartOf="@+id/hourly_time"
+        app:layout_constraintTop_toBottomOf="@+id/hourly_time"
+        tools:srcCompat="@drawable/partly_cloudy_day" />
+
+    <TextView
+        android:id="@+id/hourly_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/hourly_icon"
+        app:layout_constraintStart_toStartOf="@+id/hourly_icon"
+        app:layout_constraintTop_toBottomOf="@+id/hourly_icon"
+        tools:text="65°F" />
+
+    <TextView
+        android:id="@+id/hourly_conditions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/hourly_temperature"
+        app:layout_constraintStart_toStartOf="@+id/hourly_temperature"
+        app:layout_constraintTop_toBottomOf="@+id/hourly_temperature"
+        tools:text="Partially Cloudy" />
+</androidx.constraintlayout.widget.ConstraintLayout>
